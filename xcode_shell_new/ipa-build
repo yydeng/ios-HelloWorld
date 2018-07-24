@@ -361,7 +361,7 @@ cd $current_path
 #发布应用的url地址
 # pulish_ip="jenkins.shhxzq.com"
 # pulish_url="https://${pulish_ip}"
-pulish_ip="localhost:8080"
+pulish_ip="localhost:8080/userContent"
 pulish_url="http://${pulish_ip}"
 
 # www_dir="/Users/admin/Sites/localhost"
@@ -496,15 +496,15 @@ cat << EOF > index.html
 }
 .sky-form a.btn-u:hover {color:#fff}
 </style>
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8  col-xs-12 col-md-6 col-sm-6 text-left">
-                        本页面由 <a href="/">上海华信证券</a> 提供<a class='footer_faq' href="httt://shhxzq.com"/a>
-            </div>
-        </div><!--/row-fluid-->
-    </div><!--/container-->
-</div>
+# <div class="copyright">
+#     <div class="container">
+#         <div class="row">
+#             <div class="col-lg-8  col-xs-12 col-md-6 col-sm-6 text-left">
+#                         本页面由 <a href="/">海通证券</a> 提供<a class='footer_faq' href="httt://shhxzq.com"/a>
+#             </div>
+#         </div><!--/row-fluid-->
+#     </div><!--/container-->
+# </div>
 <div class="modal fade addmodel" id="reportApp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
