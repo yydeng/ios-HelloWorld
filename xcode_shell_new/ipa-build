@@ -208,7 +208,7 @@ fi
 #组合编译命令
 build_cmd='xcodebuild'
 
-# if [ "$build_workspace" != "" ];then
+if [ "$build_workspace" != "" ];then
 	#编译workspace
 	if [ "$build_scheme" = "" ];then
 		echo "Error! Must provide a scheme by -s option together when using -w option to compile a workspace."
@@ -217,15 +217,15 @@ build_cmd='xcodebuild'
 
 	build_cmd=${build_cmd}' -workspace '${build_workspace}' -scheme '${build_scheme}' -configuration '${build_config}' CONFIGURATION_BUILD_DIR='${compiled_path}' ONLY_ACTIVE_ARCH=NO GCC_PREPROCESSOR_DEFINITIONS="'${gcc_define}'"'
 
-# else
-# 	#编译project
-# 	build_cmd=${build_cmd}' -configuration '${build_config}
+else
+	#编译project
+	build_cmd=${build_cmd}' -scheme '${build_scheme}' -configuration '${build_config}
 
-# 	if [ "$build_target" != "" ];then
-# 		build_cmd=${build_cmd}' -target '${build_target}
-# 	fi
+	if [ "$build_target" != "" ];then
+		build_cmd=${build_cmd}' -target '${build_target}
+	fi
 
-# fi
+fi
 
 
 #设置build号 为Jenkins环境变量 相应值 -- 编译之前修改版本号
