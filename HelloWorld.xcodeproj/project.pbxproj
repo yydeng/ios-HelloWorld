@@ -15,6 +15,8 @@
 		602AB00C2106F5CC00384231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 602AB00B2106F5CC00384231 /* main.m */; };
 		602AB0162106F5CD00384231 /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602AB0152106F5CD00384231 /* HelloWorldTests.m */; };
 		602AB0212106F5CD00384231 /* HelloWorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602AB0202106F5CD00384231 /* HelloWorldUITests.m */; };
+		602AB030210718E700384231 /* netConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 602AB02F210718E700384231 /* netConfig.plist */; };
+		602AB032210719A900384231 /* packageInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 602AB031210719A900384231 /* packageInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		602AB0032106F5CC00384231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		602AB0052106F5CC00384231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602AB0082106F5CC00384231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		602AB00A2106F5CC00384231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602AB00A2106F5CC00384231 /* HelloWorld-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloWorld-Info.plist"; sourceTree = "<group>"; };
 		602AB00B2106F5CC00384231 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		602AB0112106F5CD00384231 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602AB0152106F5CD00384231 /* HelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTests.m; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		602AB01C2106F5CD00384231 /* HelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		602AB0202106F5CD00384231 /* HelloWorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldUITests.m; sourceTree = "<group>"; };
 		602AB0222106F5CD00384231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602AB02F210718E700384231 /* netConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = netConfig.plist; sourceTree = "<group>"; };
+		602AB031210719A900384231 /* packageInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = packageInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		602AAFFB2106F5CC00384231 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				602AB02E210718E700384231 /* Configs */,
 				602AAFFC2106F5CC00384231 /* AppDelegate.h */,
 				602AAFFD2106F5CC00384231 /* AppDelegate.m */,
 				602AAFFF2106F5CC00384231 /* ViewController.h */,
@@ -108,7 +113,7 @@
 				602AB0022106F5CC00384231 /* Main.storyboard */,
 				602AB0052106F5CC00384231 /* Assets.xcassets */,
 				602AB0072106F5CC00384231 /* LaunchScreen.storyboard */,
-				602AB00A2106F5CC00384231 /* Info.plist */,
+				602AB00A2106F5CC00384231 /* HelloWorld-Info.plist */,
 				602AB00B2106F5CC00384231 /* main.m */,
 			);
 			path = HelloWorld;
@@ -130,6 +135,15 @@
 				602AB0222106F5CD00384231 /* Info.plist */,
 			);
 			path = HelloWorldUITests;
+			sourceTree = "<group>";
+		};
+		602AB02E210718E700384231 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				602AB031210719A900384231 /* packageInfo.plist */,
+				602AB02F210718E700384231 /* netConfig.plist */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				602AB0092106F5CC00384231 /* LaunchScreen.storyboard in Resources */,
+				602AB032210719A900384231 /* packageInfo.plist in Resources */,
 				602AB0062106F5CC00384231 /* Assets.xcassets in Resources */,
+				602AB030210718E700384231 /* netConfig.plist in Resources */,
 				602AB0042106F5CC00384231 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,9 +449,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6G9Y6F2J2;
-				INFOPLIST_FILE = HelloWorld/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HelloWorld/HelloWorld-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,6 +460,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.htzq.htdzhiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -451,9 +470,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6G9Y6F2J2;
-				INFOPLIST_FILE = HelloWorld/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HelloWorld/HelloWorld-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,6 +481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.htzq.htdzhiPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

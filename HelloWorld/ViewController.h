@@ -11,8 +11,8 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *appidLabel;
-@property (weak, nonatomic) IBOutlet UILabel *environmentLabel;
-@property (weak, nonatomic) IBOutlet UILabel *packageTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *environmentLabel; //Develop, UAT, Release
+@property (weak, nonatomic) IBOutlet UILabel *packageTypeLabel; //appstore, adhoc, inhouse
 @property (weak, nonatomic) IBOutlet UILabel *branchLabel;
 @property (weak, nonatomic) IBOutlet UILabel *versionInfoLabel;
 
