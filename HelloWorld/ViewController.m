@@ -10,12 +10,31 @@
 
 @interface ViewController ()
 
+@property (nonatomic, copy) NSString *appid;
+@property (nonatomic, copy) NSString *environment;
+@property (nonatomic, copy) NSString *packageType;
+@property (nonatomic, copy) NSString *branch;
+@property (nonatomic, copy) NSString *versionInfo;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.appid = @"com.htzq.htdzhiPhone";
+    self.environment = @"Dev";
+    self.packageType = @"appstore";
+    self.branch = @"master";
+    self.versionInfo = @"v5.18.1(123)";
+    
+    self.appidLabel.text = [@"appid: " stringByAppendingString:self.appid];
+    self.environmentLabel.text = [@"run environment: " stringByAppendingString:self.environment];
+    self.packageTypeLabel.text = [@"packageType: " stringByAppendingString:self.packageType];
+    self.branchLabel.text = [@"branch: " stringByAppendingString:self.branch];
+    self.versionInfoLabel.text = [@"versionInfo: " stringByAppendingString:self.versionInfo];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
